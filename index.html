@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Discord Messages</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="icon"
+      href="https://discord.com/assets/07dca80a102d4149e9736d4b162cff6f.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <p class="text"></p>
+      <input type="text" class="name" id="name" placeholder="Name" />
+      <input type="text" class="text-box" id="content" placeholder="Message" />
+      <div class="check">
+        <input type="checkbox" name="check-box" class="checkbox" />
+        <span class="span">I have an Image</span>
+        <br />
+        <input
+          type="url"
+          name="image-url"
+          id="url"
+          placeholder="Paste the image url"
+          class="url"
+        />
+      </div>
+      <button onclick="sendmsg()">Send!</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
