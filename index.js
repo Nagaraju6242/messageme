@@ -3,6 +3,12 @@ var nam = document.getElementById("name");
 var text = document.querySelector(".text");
 var ur = document.querySelector(".url");
 
+var local_name = localStorage.getItem("name");
+if (name != null) {
+  nam.value = local_name;
+}
+
+
 function create_msg(msg) {
   text.innerHTML = msg;
   text.style.opacity = 1;
@@ -39,6 +45,7 @@ function sendmsg() {
     };
 
     request.send(JSON.stringify(params));
+    localStorage.setItem("name", nam.value);
     con.value = "";
     nam.value = "";
     ur.value = "";
